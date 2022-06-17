@@ -1,0 +1,37 @@
+{% include "header.html" %}
+
+<h1>Welcome to Colour Catcher!</h1>
+<form action="/" method="POST" enctype="multipart/form-data">
+    <label for="colorfile">Upload your image:</label>
+    <input type="file" id="colorfile" name="colorfile"><br><br>
+    <label for="bucketing" >Bucketing: 1 to 50<br>The lower it is, the more accurate the color.<br>We recommend around 10</label><br>
+    <input type="number" name="bucketing" id="bucketing" min="1" max="50" step="1" value="{{bucketing}}"><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<table>
+ <thead>
+    <tr>
+        <th colspan="2">
+            Most common colours:
+        </th>
+    </tr>
+ </thead>
+    <tbody>
+    {% for color in common_colors %}
+        <tr>
+            <td bgcolor={{color}}>
+                "................."
+            </td>
+            <td>
+                {{ color }}
+            </td>
+        </tr>
+    {% endfor %}
+</tbody>
+
+
+</table>
+
+{% include "footer.html" %}
+
