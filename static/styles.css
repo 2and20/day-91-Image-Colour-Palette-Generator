@@ -4,6 +4,12 @@ color:white;
 background-size: 100% 100%;
 background-repeat: no-repeat;
 background-attachment: fixed;
+text-align:center;
 }
 
 h1 {color: white;}
+
+.color-table {
+width:30%;
+margin-left:auto;
+margin-right:auto;}
